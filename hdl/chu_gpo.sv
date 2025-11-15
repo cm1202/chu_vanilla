@@ -27,13 +27,14 @@ module chu_gpo
          if (wr_en)
             buf_reg <= wr_data[W-1:0];
    // decoding logic 
-   assign wr_en = cs && write && (addr [0] == 0);
+   assign wr_en = cs && write ;
    // slot read interface
    assign rd_data =  0;
    // external output  
    assign dout = buf_reg;
 endmodule
        
+
 
 
 
